@@ -1,0 +1,6 @@
+h2 Recipe Admin
+- @recipes.each do |recipe|
+  = link_to recipe.name, admin_recipe_path(recipe)
+  | &nbsp;
+  = link_to "edit", edit_admin_recipe_path(recipe)
+  br/
