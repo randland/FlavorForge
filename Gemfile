@@ -33,12 +33,18 @@ gem 'bootsnap', require: false
 # Use Sass to process CSS
 gem 'sassc-rails'
 
-# Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
-# gem "image_processing", "~> 1.2"
-
+# Slim template rendering
 gem 'slim'
 
+# Out-of-the-box admin
 gem 'administrate'
+
+# OAuth via Google
+gem 'omniauth'
+gem 'omniauth-google'
+
+# Provides support for environment variables defined in .env
+gem 'dotenv'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
