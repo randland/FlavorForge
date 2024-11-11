@@ -14,6 +14,10 @@ require "action_view/railtie"
 require "action_cable/engine"
 # require "rails/test_unit/railtie"
 
+# Authenticaton strategies
+require 'omniauth'
+
+# Environment variables
 require 'dotenv'
 Dotenv.load
 
@@ -25,6 +29,9 @@ module FlavorForge
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
+    config.session_store :cookie_store, key: '_interslice_session'
+    config.middleware.use ActionDispatch::Cookies # Required for all session management
+    config.middleware.use ActionDispatch::Session::CookieStore, config.session_options
 
     # Configuration for the application, engines, and railties goes here.
     #
