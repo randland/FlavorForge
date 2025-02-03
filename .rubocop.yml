@@ -1,0 +1,19 @@
+AllCops:
+  NewCops: disable
+  SuggestExtensions: false
+  Exclude:
+    - 'db/**/*'
+    - 'config.ru'
+    - 'config/**/*'
+    - 'script/**/*'
+    - 'bin/setup'
+    - 'bin/**'
+    - 'bin/{rails,rake}'
+    - 'spec/spec_helper.rb'
+    - 'spec/rails_helper.rb'
+
+Style/StringLiterals:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
