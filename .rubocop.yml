@@ -1,3 +1,6 @@
+require:
+  - ./app/lib/rubocop/cop/custom_cops/common_sense
+
 AllCops:
   NewCops: disable
   SuggestExtensions: false
@@ -17,3 +20,8 @@ Style/StringLiterals:
 
 Style/Documentation:
   Enabled: false
+
+CustomCops/CommonSense:
+  Enabled: true
+  Exclude:
+    - './app/lib/rubocop/cop/custom_cops/common_sense.rb'
